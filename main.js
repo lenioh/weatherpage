@@ -86,7 +86,10 @@ function renderDailyWeather(daily) {
         dailySection.append(element);
     });
 }
-const HOUR_FORMATTER = new Intl.DateTimeFormat(undefined, { hour: "numeric" });
+const HOUR_FORMATTER = new Intl.DateTimeFormat(undefined, {
+    hour: "numeric",
+    minute: "numeric",
+});
 const hourlySection = document.querySelector("[data-hour-section]");
 const hourRowTemplate = document.getElementById("hour-row-template");
 function renderHourlyWeather(hourly) {
@@ -112,8 +115,6 @@ function renderHourlyWeather(hourly) {
 const ICON_MAP = new Map();
 
 addMapping([0, 1], "Sun");
-addMapping([2], "cloud");
-addMapping([3], "cloud");
 addMapping([2, 3, 45, 48], "cloud");
 addMapping(
     [51, 53, 55, 56, 57, 61, 63, 65, 66, 67, 80, 81, 82],
