@@ -94,7 +94,6 @@ const hourlySection = document.querySelector("[data-hour-section]");
 const hourRowTemplate = document.getElementById("hour-row-template");
 function renderHourlyWeather(hourly) {
     hourlySection.innerHTML = "";
-    console.log(hourly);
     hourly.forEach((hour) => {
         const element = hourRowTemplate.content.cloneNode(true);
         setValue("temp", hour.temp, { parent: element });
@@ -169,7 +168,6 @@ function parseDailyWeather({ daily }) {
 }
 
 function parseHourlyWeather({ hourly, current_weather }) {
-    console.log(hourly);
     const kedves = hourly.time
         .map((time, index) => {
             return {
@@ -182,8 +180,5 @@ function parseHourlyWeather({ hourly, current_weather }) {
             };
         })
         .filter(({ timestamp }) => timestamp >= current_weather.time * 1000);
-    console.log(kedves);
-    console.log("current weather", current_weather);
-    console.log(current_weather.time);
     return kedves;
 }
