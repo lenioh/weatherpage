@@ -43,7 +43,7 @@ html {
   }
   
   .header-current-temp {
-    font-size: 2rem;
+    font-size: 4rem;
     margin-left: 1rem;
   }
   
@@ -70,7 +70,7 @@ html {
   
   .value-sub-info {
     font-weight: lighter;
-    font-size: 0.75rem;
+    font-size: 1.3rem;
   }
   
   .day-section {
@@ -91,7 +91,7 @@ html {
   }
   
   .day-card-date {
-    font-size: 0.75rem;
+    font-size: 1.3rem;
     margin-top: 0.5rem;
   }
   
