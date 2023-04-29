@@ -111,9 +111,20 @@ function renderHourlyWeather(hourly) {
     });
 }
 // ICON MAPPING
+const currentTime = new Date().getHours();
+const isNight = currentTime >= 19 || currentTime < 6;
 const ICON_MAP = new Map();
 
-addMapping([0, 1], "Sun");
+function dayOrNight (hours) {
+    if (hours) {
+        addMapping([0, 1], "moon");
+        document.body.classList.add("nighttime");
+    } else {
+        addMapping([0, 1], "Sun")
+        document.body.classList.add("daytime");
+    }
+}
+dayOrNight(isNight);
 addMapping([2, 3], "overcast");
 addMapping([45, 48], "fog");
 addMapping([51, 53, 55, 61, 63], "drizzle");

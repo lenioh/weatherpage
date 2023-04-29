@@ -16,6 +16,14 @@ html {
     filter: blur(3px);
     overflow: hidden;
   }
+  .daytime {
+    background: linear-gradient(90deg,rgb(139, 187, 226), rgb(83, 163, 228));
+  }
+
+  .nighttime {
+    background: linear-gradient(90deg, rgb(42, 73, 139), rgb(44, 96, 207));
+    color: rgb(250, 250, 250);;
+  }
   
   .header {
     display: flex;
@@ -66,7 +74,6 @@ html {
   .label {
     text-transform: uppercase;
     font-weight: bold;
-    color: rgb(40, 40, 40);
   }
   
   .value-sub-info {
@@ -103,11 +110,11 @@ html {
   }
   
   .hour-row {
-    background-color: rgb(230, 230, 230);
+    background-color: rgb(97, 143, 180);
   }
   
   .hour-row:nth-child(2n) {
-    background-color: rgb(200, 200, 200);
+    background-color: rgb(77, 127, 169);
   }
   
   .hour-row > td {
