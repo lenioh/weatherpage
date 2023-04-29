@@ -114,11 +114,11 @@ function renderHourlyWeather(hourly) {
 const ICON_MAP = new Map();
 
 addMapping([0, 1], "Sun");
-addMapping([2, 3, 45, 48], "cloud");
-addMapping(
-    [51, 53, 55, 56, 57, 61, 63, 65, 66, 67, 80, 81, 82],
-    "cloudheavyrain"
-);
+addMapping([2, 3], "overcast");
+addMapping([45, 48], "fog");
+addMapping([51, 53, 55, 61, 63], "drizzle");
+addMapping([56, 57, 66, 67], "freezingdrizzle");
+addMapping([65, 80, 81, 82], "cloudheavyrain");
 addMapping([71, 73, 75, 77, 85, 86], "snowflake");
 addMapping([95, 96, 99], "storm");
 
